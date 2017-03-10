@@ -7,10 +7,10 @@ namespace ValidicCSharp.Model
     public class Parameters : IValidic
     {
         [JsonProperty("start_date")]
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
         [JsonProperty("end_date")]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [JsonProperty("offset")]
         public int? Offset { get; set; }
