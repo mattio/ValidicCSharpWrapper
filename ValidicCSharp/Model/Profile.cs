@@ -9,7 +9,7 @@ namespace ValidicCSharp.Model
         public string Uid { get; set; }
 
         [JsonProperty("gender")]
-        public GenderType Gender { get; set; }
+        public GenderType? Gender { get; set; }
 
         [JsonProperty("location")]
         public string Location { get; set; }
