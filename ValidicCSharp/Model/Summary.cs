@@ -1,42 +1,39 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.Serialization;
+using Newtonsoft.Json;
 using ValidicCSharp.Interfaces;
 
 namespace ValidicCSharp.Model
 {
     public class Summary : IValidic
     {
-        [DataMember(Name = "status")]
+        [JsonProperty("status")]
         public StatusCode Status { get; set; }
 
-        [DataMember(Name = "message")]
+        [JsonProperty("message")]
         public string Message { get; set; }
 
-        [DataMember(Name = "results")]
+        [JsonProperty("results")]
         public int Results { get; set; }
 
-        [DataMember(Name = "start_date")]
+        [JsonProperty("start_date")]
         public DateTime? StartDate { get; set; }
 
-        [DataMember(Name = "end_date")]
+        [JsonProperty("end_date")]
         public DateTime? EndDate { get; set; }
 
-        [DataMember(Name = "offset")]
+        [JsonProperty("offset")]
         public int? Offset { get; set; }
 
-        [DataMember(Name = "limit")]
+        [JsonProperty("limit")]
         public int? Limit { get; set; }
 
-        [DataMember(Name = "previous")]
-        [DefaultValue("")]
+        [JsonProperty("previous")]
         public string Previous { get; set; }
 
-        [DataMember(Name = "next")]
-        [DefaultValue("")]
+        [JsonProperty("next")]
         public string Next { get; set; }
 
-        [DataMember(Name = "@params")]
+        [JsonProperty("params")]
         public Parameters Parameters { get; set; }
     }
 }

@@ -1,26 +1,24 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.Serialization;
+using Newtonsoft.Json;
 using ValidicCSharp.Interfaces;
 
 namespace ValidicCSharp.Model
 {
     public class Parameters : IValidic
     {
-        [DataMember(Name = "start_date")]
+        [JsonProperty("start_date")]
         public DateTime StartDate { get; set; }
 
-        [DataMember(Name = "end_date")]
-        [DefaultValue("")]
+        [JsonProperty("end_date")]
         public DateTime EndDate { get; set; }
 
-        [DataMember(Name = "offset")]
+        [JsonProperty("offset")]
         public int? Offset { get; set; }
 
-        [DataMember(Name = "limit")]
+        [JsonProperty("limit")]
         public int? Limit { get; set; }
 
-        [DataMember(Name = "source")]
+        [JsonProperty("source")]
         public object Source { get; set; }
     }
 }
