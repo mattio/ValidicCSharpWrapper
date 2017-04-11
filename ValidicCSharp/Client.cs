@@ -19,6 +19,8 @@ namespace ValidicCSharp
         private readonly Uri _baseUrl = new Uri("https://api.validic.com/v1/");
         public string AccessToken = "DEMO_KEY";
 
+        public string BaseUrl { get { return _baseUrl.AbsoluteUri; } }
+
         private static void OnAddLine(LogItem l)
         {
             var tmp = AddLine;
